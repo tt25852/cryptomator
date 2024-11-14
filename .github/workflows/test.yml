@@ -19,11 +19,11 @@ jobs:
     strategy:
       matrix:
         jvm_flags:
-          - "-XX:+AggressiveOpts"
-          - "-XX:+AlwaysPreTouch"
-          - "-XX:+DisableExplicitGC"
-          - "-XX:+OptimizeStringConcat"
-          - "-XX:+UseAdaptiveSizePolicy"
+          - "-XX:+UseCompressedOops"
+          - "-XX:+UseParallelGC"
+          - "-XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal"
+          - "-XX:+UseStringDeduplication"
+          - "-XX:+AlwaysTenure"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
