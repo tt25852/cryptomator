@@ -21,8 +21,8 @@ jobs:
         jvm_flags:
           - "-XX:+UseCompressedOops"
           - "-XX:+UseParallelGC"
-          - "-XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal"
-          - "-XX:+UseStringDeduplication"
+          - "-XX:+UnlockDiagnosticVMOptions"
+          - "-XX:+PrintGCDetails"
           - "-XX:+AlwaysTenure"
     steps:
       - uses: actions/checkout@v4
