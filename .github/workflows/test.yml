@@ -19,11 +19,15 @@ jobs:
     strategy:
       matrix:
         jvm_flags:
-          - "-XX:+UseParallelGC"
-          - "-XX:+UseG1GC"
-          - "-XX:+UnlockDiagnosticVMOptions -XX:+PrintFlagsFinal"
-          - "-XX:+UseStringDeduplication"
-          - "-XX:+OptimizeStringConcat"
+
+
+          - "-XX:+PrintCompilation"
+          - "-XX:+UseSerialGC"
+          - "-XX:+UnlockExperimentalVMOptions"
+          - "-XX:TieredStopAtLevel=1"
+          - "-Xmx512m"
+          
+          
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
