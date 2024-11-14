@@ -14,7 +14,7 @@ defaults:
 
 jobs:
   test:
-    name: Compile and Test with Multiple JVM Flags
+    name: Compile and Test 
     runs-on: ubuntu-latest
     strategy:
       matrix:
