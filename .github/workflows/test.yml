@@ -19,11 +19,11 @@ jobs:
     strategy:
       matrix:
         jvm_flags:
-          - "-Xmx512m"
-          - "-XX:+UseSerialGC"
-          - "-XX:TieredStopAtLevel=1"
-          - "-XX:+PrintCompilation"
-          - "-XX:+UnlockExperimentalVMOptions"
+          - "-XX:+AggressiveOpts"
+          - "-XX:+AlwaysPreTouch"
+          - "-XX:+DisableExplicitGC"
+          - "-XX:+OptimizeStringConcat"
+          - "-XX:+UseAdaptiveSizePolicy"
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-java@v4
